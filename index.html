@@ -23,8 +23,8 @@
             --accent-red: #C1272D;
             --whatsapp: #25D366;
             
-            /* Spacing */
-            --section-padding: 120px;
+            /* Spacing - RÉDUIT */
+            --section-padding: 60px;  /* ← 60px au lieu de 120px */
             --container-max: 1400px;
         }
         
@@ -53,7 +53,7 @@
             line-height: 1.2;
         }
         
-        /* Header - Minimal & Elegant */
+        /* Header - COMPACT (Market Standard) */
         .header {
             position: fixed;
             top: 0;
@@ -74,7 +74,7 @@
         .header-content {
             max-width: var(--container-max);
             margin: 0 auto;
-            padding: 1.5rem 3rem;
+            padding: 0.75rem 3rem;  /* ← RÉDUIT: 0.75rem au lieu de 1.5rem */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -82,7 +82,7 @@
         
         .logo {
             font-family: 'DM Serif Display', serif;
-            font-size: 26px;
+            font-size: 22px;  /* ← RÉDUIT: 22px au lieu de 26px */
             color: var(--charcoal);
             letter-spacing: -0.5px;
         }
@@ -95,73 +95,56 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.75rem;  /* ← RÉDUIT */
         }
         
         .logo-image {
-            height: 40px;
+            height: 35px;  /* ← RÉDUIT: 35px au lieu de 40px */
             width: auto;
         }
         
         .flags-icon {
-            height: 30px;
+            height: 26px;  /* ← RÉDUIT */
             width: auto;
         }
         
         .header-contact {
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: 1.5rem;  /* ← RÉDUIT */
             font-size: 14px;
             color: var(--warm-gray);
         }
         
         .header-flags {
-            font-size: 20px;
+            font-size: 18px;  /* ← RÉDUIT */
         }
         
-        /* Hero Section - Separated Layout */
+        /* Hero Section - IMAGE DOMINANTE */
         .hero {
-            padding-top: 6rem;
+            padding-top: 4.5rem;  /* ← RÉDUIT pour compenser header plus petit */
         }
         
         .hero-content {
             text-align: center;
-            padding: 3rem 3rem 4rem;
+            padding: 1.5rem 3rem 1rem;  /* ← TRÈS RÉDUIT: texte compact */
             width: 100%;
             direction: rtl;
         }
         
-        .hero-eyebrow {
-            font-size: 13px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-        }
-        
         .hero h1 {
-            font-size: 72px;
-            margin-bottom: 2rem;
+            font-size: 48px;  /* ← RÉDUIT: 48px au lieu de 72px */
+            margin-bottom: 1rem;  /* ← RÉDUIT */
             color: var(--charcoal);
             line-height: 1.1;
         }
         
         .hero-subtitle {
-            font-size: 22px;
+            font-size: 16px;  /* ← RÉDUIT: 16px au lieu de 22px */
             color: var(--warm-gray);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;  /* ← RÉDUIT */
             font-weight: 300;
             line-height: 1.6;
-        }
-        
-        .hero-subtitle-fr {
-            font-size: 18px;
-            color: var(--warm-gray);
-            font-style: italic;
-            margin-bottom: 3rem;
-            opacity: 0.8;
         }
         
         .hero-cta {
@@ -170,13 +153,14 @@
             gap: 0.75rem;
             background: var(--charcoal);
             color: white;
-            padding: 1.25rem 2.5rem;
+            padding: 1rem 2rem;  /* ← RÉDUIT */
             text-decoration: none;
-            font-size: 16px;
+            font-size: 15px;  /* ← RÉDUIT */
             font-weight: 500;
             border-radius: 2px;
             transition: all 0.3s ease;
             border: 2px solid var(--charcoal);
+            margin-top: 1rem;
         }
         
         .hero-cta:hover {
@@ -185,13 +169,14 @@
             transform: translateY(-2px);
         }
         
+        /* Hero Image - TRÈS GRANDE ET DOMINANTE */
         .hero-image {
             position: relative;
             width: 100%;
             height: auto;
-            min-height: 400px;
+            min-height: 500px;  /* ← AUGMENTÉ: 500px au lieu de 400px */
             max-width: var(--container-max);
-            margin: 0 auto;
+            margin: 2rem auto 0;  /* ← Marge top augmentée */
             background: var(--sand);
             border-radius: 2px;
             overflow: visible;
@@ -200,6 +185,7 @@
         .hero-image img {
             width: 100%;
             height: auto;
+            min-height: 500px;  /* ← IMAGE TRÈS VISIBLE */
             display: block;
             object-fit: contain;
             position: relative;
@@ -218,37 +204,15 @@
             pointer-events: none;
         }
         
-        .image-placeholder-elegant {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: var(--warm-gray);
-        }
-        
-        .image-placeholder-elegant .icon {
-            font-size: 64px;
-            margin-bottom: 1.5rem;
-            opacity: 0.3;
-        }
-        
-        .image-placeholder-elegant .text {
-            font-size: 14px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        
-        /* Services Section - Asymmetric Layout */
+        /* Services Section - SPACING RÉDUIT */
         .services-section {
-            padding: var(--section-padding) 3rem;
+            padding: var(--section-padding) 3rem;  /* ← Utilise 60px */
             background: var(--cream);
         }
         
         .section-intro {
             max-width: 700px;
-            margin: 0 auto 5rem;
+            margin: 0 auto 3rem;  /* ← RÉDUIT: 3rem au lieu de 5rem */
             text-align: center;
         }
         
@@ -257,29 +221,29 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             color: var(--gold);
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;  /* ← RÉDUIT */
             font-weight: 500;
         }
         
         .section-title {
-            font-size: 56px;
-            margin-bottom: 1.5rem;
+            font-size: 46px;  /* ← RÉDUIT: 46px au lieu de 56px */
+            margin-bottom: 1rem;  /* ← RÉDUIT */
             color: var(--charcoal);
         }
         
         .section-description {
-            font-size: 18px;
+            font-size: 16px;  /* ← RÉDUIT */
             color: var(--warm-gray);
             line-height: 1.8;
         }
         
-        /* Service Cards - Editorial Grid */
+        /* Service Cards - SPACING RÉDUIT */
         .services-grid {
             max-width: var(--container-max);
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            gap: 3rem;
+            gap: 2rem;  /* ← RÉDUIT: 2rem au lieu de 3rem */
         }
         
         .service-card {
@@ -313,50 +277,50 @@
         }
         
         .service-card-image {
-            height: 320px;
+            height: 280px;  /* ← RÉDUIT: 280px au lieu de 320px */
             background: var(--sand);
             position: relative;
             overflow: hidden;
         }
         
         .service-card-content {
-            padding: 2.5rem;
+            padding: 2rem;  /* ← RÉDUIT: 2rem au lieu de 2.5rem */
         }
         
         .service-number {
-            font-size: 12px;
+            font-size: 11px;  /* ← RÉDUIT */
             letter-spacing: 2px;
             color: var(--gold);
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;  /* ← RÉDUIT */
             font-weight: 500;
         }
         
         .service-title {
-            font-size: 32px;
-            margin-bottom: 0.75rem;
+            font-size: 28px;  /* ← RÉDUIT: 28px au lieu de 32px */
+            margin-bottom: 0.5rem;  /* ← RÉDUIT */
             color: var(--charcoal);
         }
         
         .service-title-fr {
-            font-size: 16px;
+            font-size: 14px;  /* ← RÉDUIT */
             color: var(--warm-gray);
             font-style: italic;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;  /* ← RÉDUIT */
         }
         
         .service-features {
             list-style: none;
-            margin-top: 1.5rem;
+            margin-top: 1rem;  /* ← RÉDUIT */
         }
         
         .service-features li {
-            padding: 0.75rem 0;
+            padding: 0.6rem 0;  /* ← RÉDUIT */
             border-bottom: 1px solid rgba(0,0,0,0.05);
-            font-size: 15px;
+            font-size: 14px;  /* ← RÉDUIT */
             color: var(--warm-gray);
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.75rem;  /* ← RÉDUIT */
         }
         
         .service-features li:last-child {
@@ -365,13 +329,13 @@
         
         .feature-check {
             color: var(--morocco-green);
-            font-size: 18px;
+            font-size: 16px;  /* ← RÉDUIT */
         }
         
-        /* Philosophy Section - Full Width Image + Text */
+        /* Philosophy Section - SPACING RÉDUIT */
         .philosophy-section {
             position: relative;
-            min-height: 70vh;
+            min-height: 60vh;  /* ← RÉDUIT: 60vh au lieu de 70vh */
             display: grid;
             grid-template-columns: 1fr 1fr;
             background: var(--sand);
@@ -383,7 +347,7 @@
         }
         
         .philosophy-content {
-            padding: 6rem;
+            padding: 4rem;  /* ← RÉDUIT: 4rem au lieu de 6rem */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -391,39 +355,39 @@
         }
         
         .philosophy-title {
-            font-size: 48px;
-            margin-bottom: 2rem;
+            font-size: 40px;  /* ← RÉDUIT: 40px au lieu de 48px */
+            margin-bottom: 1.5rem;  /* ← RÉDUIT */
             color: var(--charcoal);
         }
         
         .philosophy-text {
-            font-size: 18px;
+            font-size: 16px;  /* ← RÉDUIT */
             line-height: 1.9;
             color: var(--warm-gray);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;  /* ← RÉDUIT */
         }
         
         .philosophy-highlight {
-            font-size: 24px;
+            font-size: 22px;  /* ← RÉDUIT */
             color: var(--gold);
             font-style: italic;
-            margin-top: 2rem;
+            margin-top: 1.5rem;  /* ← RÉDUIT */
             padding-left: 2rem;
             border-left: 2px solid var(--gold);
         }
         
-        /* Values Grid - Minimalist */
+        /* Values Grid - SPACING RÉDUIT */
         .values-section {
-            padding: var(--section-padding) 3rem;
+            padding: var(--section-padding) 3rem;  /* ← Utilise 60px */
             background: var(--cream);
         }
         
         .values-grid {
             max-width: var(--container-max);
-            margin: 4rem auto 0;
+            margin: 3rem auto 0;  /* ← RÉDUIT: 3rem au lieu de 4rem */
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 4rem;
+            gap: 3rem;  /* ← RÉDUIT: 3rem au lieu de 4rem */
         }
         
         .value-item {
@@ -431,25 +395,25 @@
         }
         
         .value-icon {
-            font-size: 48px;
-            margin-bottom: 1.5rem;
+            font-size: 42px;  /* ← RÉDUIT */
+            margin-bottom: 1rem;  /* ← RÉDUIT */
         }
         
         .value-title {
-            font-size: 24px;
-            margin-bottom: 1rem;
+            font-size: 22px;  /* ← RÉDUIT */
+            margin-bottom: 0.75rem;  /* ← RÉDUIT */
             color: var(--charcoal);
         }
         
         .value-description {
-            font-size: 15px;
+            font-size: 14px;  /* ← RÉDUIT */
             color: var(--warm-gray);
             line-height: 1.7;
         }
         
-        /* CTA Section - Bold & Centered */
+        /* CTA Section - SPACING RÉDUIT */
         .cta-section {
-            padding: 8rem 3rem;
+            padding: 5rem 3rem;  /* ← RÉDUIT: 5rem au lieu de 8rem */
             background: var(--charcoal);
             text-align: center;
             position: relative;
@@ -474,15 +438,15 @@
         }
         
         .cta-title {
-            font-size: 56px;
+            font-size: 46px;  /* ← RÉDUIT: 46px au lieu de 56px */
             color: white;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;  /* ← RÉDUIT */
         }
         
         .cta-subtitle {
-            font-size: 20px;
+            font-size: 18px;  /* ← RÉDUIT */
             color: rgba(255,255,255,0.7);
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;  /* ← RÉDUIT */
             font-weight: 300;
         }
         
@@ -490,32 +454,31 @@
             display: inline-flex;
             align-items: center;
             gap: 1rem;
-            background: green;
-            color: var(--charcoal);
-            padding: 1.5rem 3rem;
+            background: var(--whatsapp);
+            color: white;
+            padding: 1.25rem 2.5rem;  /* ← LÉGÈREMENT RÉDUIT */
             text-decoration: none;
-            font-size: 18px;
+            font-size: 17px;  /* ← RÉDUIT */
             font-weight: 500;
             border-radius: 2px;
             transition: all 0.3s ease;
         }
         
         .cta-button:hover {
-            background: var(--gold);
-            color: white;
+            background: #1EA952;
             transform: translateY(-4px);
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
         
-        /* Pricing Section - Elegant Table */
+        /* Pricing Section - SPACING RÉDUIT */
         .pricing-section {
-            padding: var(--section-padding) 3rem;
+            padding: var(--section-padding) 3rem;  /* ← Utilise 60px */
             background: var(--sand);
         }
         
         .pricing-toggle {
             max-width: 900px;
-            margin: 3rem auto;
+            margin: 2rem auto;  /* ← RÉDUIT: 2rem au lieu de 3rem */
             background: white;
             border: 1px solid rgba(201,169,97,0.2);
             border-radius: 2px;
@@ -528,19 +491,19 @@
         }
         
         .pricing-toggle-header {
-            padding: 2rem;
+            padding: 1.5rem;  /* ← RÉDUIT: 1.5rem au lieu de 2rem */
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .pricing-toggle-title {
-            font-size: 28px;
+            font-size: 24px;  /* ← RÉDUIT: 24px au lieu de 28px */
             color: var(--charcoal);
         }
         
         .pricing-toggle-icon {
-            font-size: 24px;
+            font-size: 22px;  /* ← RÉDUIT */
             color: var(--gold);
             transition: transform 0.3s ease;
         }
@@ -560,15 +523,15 @@
         }
         
         .pricing-table {
-            padding: 2rem;
+            padding: 1.5rem;  /* ← RÉDUIT */
             border-top: 1px solid rgba(201,169,97,0.1);
         }
         
         .pricing-row {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr;  /* ← SIMPLIFIÉ: 2 colonnes */
             gap: 2rem;
-            padding: 1.5rem 0;
+            padding: 1.25rem 0;  /* ← RÉDUIT */
             border-bottom: 1px solid rgba(0,0,0,0.05);
         }
         
@@ -577,36 +540,30 @@
         }
         
         .pricing-service {
-            font-size: 18px;
+            font-size: 17px;  /* ← RÉDUIT */
             color: var(--charcoal);
             font-weight: 500;
         }
         
         .pricing-service-sub {
-            font-size: 14px;
+            font-size: 13px;  /* ← RÉDUIT */
             color: var(--warm-gray);
             font-style: italic;
             margin-top: 0.25rem;
         }
         
-        .pricing-frequency {
-            font-size: 15px;
-            color: var(--warm-gray);
-            text-align: center;
-        }
-        
         .pricing-amount {
-            font-size: 24px;
+            font-size: 22px;  /* ← RÉDUIT */
             color: var(--morocco-green);
             font-weight: 600;
             text-align: right;
         }
         
-        /* Footer - Minimal */
+        /* Footer - SPACING RÉDUIT */
         .footer {
             background: var(--charcoal);
             color: rgba(255,255,255,0.7);
-            padding: 5rem 3rem 3rem;
+            padding: 4rem 3rem 2.5rem;  /* ← RÉDUIT */
         }
         
         .footer-content {
@@ -614,14 +571,14 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 5rem;
-            margin-bottom: 4rem;
+            gap: 4rem;  /* ← RÉDUIT */
+            margin-bottom: 3rem;  /* ← RÉDUIT */
         }
         
         .footer-section h3 {
-            font-size: 18px;
+            font-size: 17px;  /* ← RÉDUIT */
             color: white;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;  /* ← RÉDUIT */
             font-weight: 500;
         }
         
@@ -630,23 +587,23 @@
         }
         
         .footer-section li {
-            margin-bottom: 0.75rem;
-            font-size: 15px;
+            margin-bottom: 0.6rem;  /* ← RÉDUIT */
+            font-size: 14px;  /* ← RÉDUIT */
         }
         
         .footer-bottom {
             max-width: var(--container-max);
             margin: 0 auto;
-            padding-top: 3rem;
+            padding-top: 2.5rem;  /* ← RÉDUIT */
             border-top: 1px solid rgba(255,255,255,0.1);
             text-align: center;
         }
         
         .footer-logo {
             font-family: 'DM Serif Display', serif;
-            font-size: 24px;
+            font-size: 22px;  /* ← RÉDUIT */
             color: white;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;  /* ← RÉDUIT */
         }
         
         .footer-logo-accent {
@@ -673,29 +630,27 @@
         /* Responsive */
         @media (max-width: 1024px) {
             :root {
-                --section-padding: 80px;
+                --section-padding: 50px;  /* ← RÉDUIT pour tablet */
             }
             
             .hero {
-                padding-top: 5rem;
+                padding-top: 4rem;
             }
             
             .hero-content {
-                padding: 4rem 2rem 3rem;
+                padding: 2rem 2rem 1.5rem;
             }
             
             .hero-image {
-                min-height: 250px;
-                padding: 0.5rem;
+                min-height: 350px;
             }
             
             .hero-image img {
-                width: 100%;
-                height: auto;
+                min-height: 350px;
             }
             
             .hero h1 {
-                font-size: 56px;
+                font-size: 42px;
             }
             
             .services-grid {
@@ -714,12 +669,12 @@
             }
             
             .philosophy-content {
-                padding: 4rem 2rem;
+                padding: 3rem 2rem;
             }
             
             .values-grid {
                 grid-template-columns: 1fr;
-                gap: 3rem;
+                gap: 2.5rem;
             }
             
             .footer-content {
@@ -730,23 +685,35 @@
         
         @media (max-width: 768px) {
             .header-content {
-                padding: 1rem 1.5rem;
+                padding: 0.75rem 1.5rem;
             }
             
             .hero h1 {
-                font-size: 42px;
+                font-size: 36px;
+            }
+            
+            .hero-image {
+                min-height: 280px;
+            }
+            
+            .hero-image img {
+                min-height: 280px;
             }
             
             .section-title {
-                font-size: 38px;
+                font-size: 32px;
             }
             
             .cta-title {
-                font-size: 38px;
+                font-size: 34px;
             }
             
             .pricing-row {
                 grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .pricing-amount {
                 text-align: center;
             }
         }
@@ -758,7 +725,6 @@
 <header class="header" id="header">
     <div class="header-content">
         <div class="logo-container">
-            
             <div class="logo serif">
                 Watiqa<span class="logo-accent">Flussi</span>
             </div>
@@ -768,359 +734,334 @@
         </div>
     </div>
 </header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content fade-in-up">
+        <h1 class="serif">خدماتك بين أوروبا و المغرب</h1>
+
+        <!-- Hero Image - TRÈS GRANDE ET VISIBLE -->
+        <div class="hero-image">
+            <img src="images/hero-services.svg" 
+                 alt="Services WatiqaFlussi Europe-Maroc">
+        </div>
+        
+        <p class="hero-subtitle">
+            تسيفيط الفلوس، السفريات، الفيزا، الوثائق - كلشي بثقة و احترافية
+        </p>
+        
+        <a href="#contact" class="hero-cta">
+            <span>تواصل معنا</span>
+            <span>→</span>
+        </a>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section">
+    <div class="section-intro">
+        <h2 class="section-title serif">خدماتنا</h2>
+        <p class="section-description">
+             من الفيزا للوثائق الإدارية، من حجز السفريات لتسيفيط الفلوس 
+        </p>
+    </div>
     
+    <div class="services-grid">
+        <!-- Service 3: Visa -->
+        <div class="service-card">
+            <div class="service-card-image">
+                <img src="images/visa-documents.svg" 
+                     alt="Services visa et consulaires" 
+                     style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="service-card-content">
+                <div class="service-number">03</div>
+                <h3 class="service-title serif">الفيزا</h3>
+                <ul class="service-features">
+                    <li><span class="feature-check">✓</span> تعمير الفورميلير | Formulaires</li>
+                    <li><span class="feature-check">✓</span> أخذ الرونديفو | Rendez-vous</li>
+                    <li><span class="feature-check">✓</span> متابعة الملف | Suivi complet</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Service 4: Documents -->
+        <div class="service-card">
+            <div class="service-card-image">
+                <img src="images/documents-admin.svg" 
+                     alt="Documents Italie et Espagne" 
+                     style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="service-card-content">
+                <div class="service-number">04</div>
+                <h3 class="service-title serif">الوثائق</h3>
+                <ul class="service-features">
+                    <li><span class="feature-check">✓</span> 🇮🇹 Dichiarazione INPS</li>
+                    <li><span class="feature-check">✓</span> 🇪🇸 Declaración SEPE</li>
+                    <li><span class="feature-check">✓</span> Decreto flussi</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Service 1: Money Transfer -->
+        <div class="service-card">
+            <div class="service-card-image">
+                <img src="images/money-transfer-elegant.svg" 
+                     alt="Transfert d'argent vers le Maroc" 
+                     style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="service-card-content">
+                <div class="service-number">01</div>
+                <h3 class="service-title serif">تسيفيط الفلوس</h3>
+                <ul class="service-features">
+                    <li><span class="feature-check">✓</span> وصول في ساعتين</li>
+                    <li><span class="feature-check">✓</span> أرخص من البنوك</li>
+                    <li><span class="feature-check">✓</span> آمن و مضمون</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Service 2: Travel -->
+        <div class="service-card">
+            <div class="service-card-image">
+                <img src="images/travel-premium.svg" 
+                     alt="Réservation de voyages" 
+                     style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="service-card-content">
+                <div class="service-number">02</div>
+                <h3 class="service-title serif">السفريات</h3>
+                <ul class="service-features">
+                    <li><span class="feature-check">✓</span> بييات الطيارة</li>
+                    <li><span class="feature-check">✓</span> بييات الباطو</li>
+                    <li><span class="feature-check">✓</span> أحسن الأثمنة</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
+<!-- Philosophy Section -->
+<section class="philosophy-section">
+    <div class="philosophy-image">
+        <img src="images/philosophy-trust.svg" 
+             alt="Notre philosophie" 
+             style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
     
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content fade-in-up">
-            <h1 class="serif">خدماتك بين أوروبا و المغرب</h1>
+    <div class="philosophy-content">
+        <h2 class="philosophy-title serif">فلسفتنا</h2>
+        <p class="philosophy-text">
+            حنا ما كنبيعوش غير خدمات. كنبنيو علاقات مبنية على الثقة و الاحترام.
+        </p>
+        <p class="philosophy-text">
+            كل عميل عندنا هو فرد من العائلة. كنفهمو التحديات ديالك، كنتكلمو بلغتك، 
+            و كنكونو معاك في كل خطوة.
+        </p>
+        <p class="philosophy-highlight serif">
+            "الخدمة ديالنا، هي الثقة ديالك"
+        </p>
+    </div>
+</section>
 
-            <!-- Hero Image - Full Width Below -->
-            <div class="hero-image">
-                <img src="images/hero-services.svg" 
-                     alt="Services WatiqaFlussi Europe-Maroc">
-            </div>
-            
-            <p class="hero-subtitle">
-                تسيفيط الفلوس، السفريات، الفيزا، الوثائق
-                كلشي بثقة و احترافية
-            </p>
-            
-   
-            
-            <a href="#contact" class="hero-cta">
-                <span>تواصل معنا</span>
-                <span>→</span>
-            </a>
-        </div>
-    </section>
+<!-- Values Section -->
+<section class="values-section">
+    <div class="section-intro">
+        <h2 class="section-title serif">علاش تختارنا؟</h2>
+    </div>
     
- 
-
-    <!-- Services Section -->
-    <section class="services-section">
-        <div class="section-intro">
-            <h2 class="section-title serif">خدماتنا</h2>
-            <p class="section-description">
-                 من الفيزا للوثائق الإدارية، من حجز السفريات لتسيفيط الفلوس 
-            
+    <div class="values-grid">
+        <div class="value-item">
+            <div class="value-icon">🎯</div>
+            <h3 class="value-title serif">كلشي في بلاصة وحدة</h3>
+            <p class="value-description">
+                ما بقاش خاصك تمشي لبلايص بزاف
             </p>
         </div>
         
-        <div class="services-grid">
-
-                        <!-- Service 3: Visa -->
-            <div class="service-card">
-                <div class="service-card-image">
-                    <img src="images/visa-documents.svg" 
-                         alt="Services visa et consulaires" 
-                         style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="service-card-content">
-                    <div class="service-number">03</div>
-                    <h3 class="service-title serif">الفيزا</h3>
-                   
-                    <ul class="service-features">
-                        <li><span class="feature-check">✓</span> تعمير الفورميلير | Formulaires</li>
-                        <li><span class="feature-check">✓</span> أخذ الرونديفو | Rendez-vous</li>
-                        <li><span class="feature-check">✓</span> متابعة الملف | Suivi complet</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Service 4: Documents -->
-            <div class="service-card">
-                <div class="service-card-image">
-                    <img src="images/documents-admin.svg" 
-                         alt="Documents Italie et Espagne" 
-                         style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="service-card-content">
-                    <div class="service-number">04</div>
-                    <h3 class="service-title serif">الوثائق</h3>
-                  
-                    <ul class="service-features">
-                        <li><span class="feature-check">✓</span> 🇮🇹 Dichiarazione disoccupazione</li>
-                        <li><span class="feature-check">✓</span> 🇪🇸 Documentos España</li>
-                        <li><span class="feature-check">✓</span> Decreto flussi - Nulla Osta</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Service 1: Money Transfer -->
-            <div class="service-card">
-                <div class="service-card-image">
-                    <img src="images/money-transfer-elegant.svg" 
-                         alt="Transfert d'argent vers le Maroc" 
-                         style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="service-card-content">
-                    <div class="service-number">01</div>
-                    <h3 class="service-title serif">تسيفيط الفلوس</h3>
-                   
-                    <ul class="service-features">
-                        <li><span class="feature-check">✓</span> وصول في ساعتين | Arrivée en 2h</li>
-                        <li><span class="feature-check">✓</span> أرخص من البنوك | Moins cher que les banques</li>
-                        <li><span class="feature-check">✓</span> آمن و مضمون | Sécurisé et garanti</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Service 2: Travel -->
-            <div class="service-card">
-                <div class="service-card-image">
-                    <img src="images/travel-premium.svg" 
-                         alt="Réservation de voyages" 
-                         style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div class="service-card-content">
-                    <div class="service-number">02</div>
-                    <h3 class="service-title serif">السفريات</h3>
-                  
-                    <ul class="service-features">
-                        <li><span class="feature-check">✓</span> بييات الطيارة | Billets d'avion</li>
-                        <li><span class="feature-check">✓</span> بييات الباطو | Billets de bateau</li>
-                        <li><span class="feature-check">✓</span> أحسن الأثمنة | Meilleurs prix</li>
-                    </ul>
-                </div>
-            </div>
-            
-
-        </div>
-    </section>
-
-    <!-- Philosophy Section -->
-    <section class="philosophy-section">
-        <div class="philosophy-image">
-            <img src="images/philosophy-trust.svg" 
-                 alt="Notre philosophie - Confiance et respect" 
-                 style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="value-item">
+            <div class="value-icon">💬</div>
+            <h3 class="value-title serif">بلغتك</h3>
+            <p class="value-description">
+                كنتكلمو الدارجة، الفرنسية، الإيطالية و الإسبانية
+            </p>
         </div>
         
-        <div class="philosophy-content">
-            <h2 class="philosophy-title serif">فلسفتنا</h2>
-            <p class="philosophy-text">
-                حنا ما كنبيعوش غير خدمات. كنبنيو علاقات مبنية على الثقة و الاحترام.
-            </p>
-            <p class="philosophy-text">
-                كل عميل عندنا هو فرد من العائلة. كنفهمو التحديات ديالك، كنتكلمو بلغتك، 
-                و كنكونو معاك في كل خطوة.
-            </p>
-     
-            <p class="philosophy-highlight serif">
-                "الخدمة ديالنا، هي الثقة ديالك"
+        <div class="value-item">
+            <div class="value-icon">⚡</div>
+            <h3 class="value-title serif">سرعة و فعالية</h3>
+            <p class="value-description">
+                ما كنضيعوش الوقت. خدمة سريعة و احترافية
             </p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Values Section -->
-    <section class="values-section">
-        <div class="section-intro">
-            
-            <h2 class="section-title serif">علاش تختارنا؟</h2>
-        </div>
-        
-        <div class="values-grid">
-            <div class="value-item">
-                <div class="value-icon">🎯</div>
-                <h3 class="value-title serif">كلشي في بلاصة وحدة</h3>
-                <p class="value-description">
-                    ما بقاش خاصك تمشي لبلايص بزاف
-                </p>
-            </div>
-            
-            <div class="value-item">
-                <div class="value-icon">💬</div>
-                <h3 class="value-title serif">بلغتك</h3>
-                <p class="value-description">
-                    كنتكلمو الدارجة، الفرنسية، الإيطالية و الإسبانية
-                </p>
-            </div>
-            
-            <div class="value-item">
-                <div class="value-icon">⚡</div>
-                <h3 class="value-title serif">سرعة و فعالية</h3>
-                <p class="value-description">
-                    ما كنضيعوش الوقت. خدمة سريعة و احترافية
-                </p>
-            </div>
-        </div>
-    </section>
+<!-- CTA Section -->
+<section class="cta-section" id="contact">
+    <div class="cta-content">
+        <h2 class="cta-title serif">ابدا دابا</h2>
+        <p class="cta-subtitle">
+            تواصل معانا على الواتساب و غنجاوبوك في دقائق
+        </p>
+        <a href="https://wa.me/+212750707218?text=السلام%20عليكم%20ورحمة%20الله%20وبركاته%0A%0Aبغيت%20معلومات%20على%20الخدمات%20ديالكم%3A%0A%0A☑️%20تسيفيط%20الفلوس%20للمغرب%0A☑️%20حجز%20بييات%20الطيارة%20و%20الباطو%0A☑️%20خدمات%20الفيزا%0A☑️%20الوثائق%20الإدارية%0A%0Aشكرا%20و%20بارك%20الله%20فيكم" class="cta-button">
+            <span>📱</span>
+            <span>WhatsApp</span>
+        </a>
+    </div>
+</section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" id="contact">
-        <div class="cta-content">
-            <h2 class="cta-title serif">ابدا دابا</h2>
-            <p class="cta-subtitle">
-                تواصل معانا على الواتساب و غنجاوبوك في دقائق
-            
-            </p>
-
-           <a href="https://wa.me/+212750707218?text=السلام%20عليكم%20ورحمة%20الله%20وبركاته%0A%0Aبغيت%20معلومات%20على%20الخدمات%20ديالكم%3A%0A%0A☑️%20تسيفيط%20الفلوس%20للمغرب%0A☑️%20حجز%20بييات%20الطيارة%20و%20الباطو%0A☑️%20خدمات%20الفيزا%0A☑️%20الوثائق%20الإدارية%0A%0Aشكرا%20و%20بارك%20الله%20فيكم" class="cta-button">
-                <span>📱</span>
-                <span>WhatsApp</span>
-            </a>
+<!-- Pricing Section -->
+<section class="pricing-section">
+    <div class="section-intro">
+        <h2 class="section-title serif">الأثمنة</h2>
+    </div>
+    
+    <div class="pricing-toggle" onclick="togglePricing()">
+        <div class="pricing-toggle-header">
+            <h3 class="pricing-toggle-title serif">انظر التسعير التفصيلي</h3>
+            <div class="pricing-toggle-icon">↓</div>
         </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing-section">
-        <div class="section-intro">
-            <h2 class="section-title serif">الأثمنة</h2>
-        </div>
-        
-        <div class="pricing-toggle" onclick="togglePricing()">
-            <div class="pricing-toggle-header">
-                <h3 class="pricing-toggle-title serif"> انظر التسعير التفصيلي</h3>
-                <div class="pricing-toggle-icon">↓</div>
-            </div>
-            <div class="pricing-content" id="pricingContent">
-                <div class="pricing-table">
-                    <div class="pricing-row">
-                        <div>
-                            <div class="pricing-service">💰 تسيفيط فلوس</div>
-                            <div class="pricing-service-sub">Transfert d'argent</div>
-                        </div>
-                        <div class="pricing-amount">5€</div>
+        <div class="pricing-content" id="pricingContent">
+            <div class="pricing-table">
+                <div class="pricing-row">
+                    <div>
+                        <div class="pricing-service">💰 تسيفيط فلوس</div>
+                        <div class="pricing-service-sub">Transfert d'argent</div>
                     </div>
-                    
-                    <div class="pricing-row">
-                        <div>
-                            <div class="pricing-service">✈️ بيية طيارة</div>
-                            <div class="pricing-service-sub">Billet avion</div>
-                        </div>
-                  
-                        <div class="pricing-amount">10€</div>
-                    </div>
-                    
-                    <div class="pricing-row">
-                        <div>
-                            <div class="pricing-service">🚢 بيية باطو</div>
-                            <div class="pricing-service-sub">Billet bateau</div>
-                        </div>
-                    
-                        <div class="pricing-amount">10€</div>
-                    </div>
-                    
-                    <div class="pricing-row">
-                        <div>
-                            <div class="pricing-service">📋 فيزا - فورميلير</div>
-                            <div class="pricing-service-sub">Visa - Formulaire</div>
-                        </div>
-                      
-                        <div class="pricing-amount">5€</div>
-                    </div>
-                    
-                    <div class="pricing-row">
-                        <div>
-                            <div class="pricing-service">📅 رونديفو</div>
-                            <div class="pricing-service-sub">Rendez-vous consulat</div>
-                        </div>
-                    
-                        <div class="pricing-amount">250€</div>
-                    </div>
-                    
-                    <div class="pricing-row">
-                        <div>
-                            <div class="pricing-service">📄 ديكلاراسيون شوماج (IT/ES)</div>
-                            <div class="pricing-service-sub">Dichiarazione disoccupazione</div>
-                        </div>
+                    <div class="pricing-amount">5€</div>
+                </div>
                 
-                        <div class="pricing-amount">30€</div>
+                <div class="pricing-row">
+                    <div>
+                        <div class="pricing-service">✈️ بيية طيارة</div>
+                        <div class="pricing-service-sub">Billet avion</div>
                     </div>
-                    
-                    <div class="pricing-row">
-                        <div>
-                            <div class="pricing-service">⚖️ ديكريتو فلوسي</div>
-                            <div class="pricing-service-sub">Decreto flussi - Nulla Osta</div>
-                        </div>
-              
-                        <div class="pricing-amount">100€</div>
+                    <div class="pricing-amount">10€</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>
+                        <div class="pricing-service">🚢 بيية باطو</div>
+                        <div class="pricing-service-sub">Billet bateau</div>
                     </div>
+                    <div class="pricing-amount">10€</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>
+                        <div class="pricing-service">📋 فيزا - فورميلير</div>
+                        <div class="pricing-service-sub">Visa - Formulaire</div>
+                    </div>
+                    <div class="pricing-amount">250€</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>
+                        <div class="pricing-service">📅 رونديفو</div>
+                        <div class="pricing-service-sub">Rendez-vous consulat</div>
+                    </div>
+                    <div class="pricing-amount">250€</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>
+                        <div class="pricing-service">📄 ديكلاراسيون شوماج (IT/ES)</div>
+                        <div class="pricing-service-sub">INPS / SEPE</div>
+                    </div>
+                    <div class="pricing-amount">30€</div>
+                </div>
+                
+                <div class="pricing-row">
+                    <div>
+                        <div class="pricing-service">⚖️ ديكريتو فلوسي</div>
+                        <div class="pricing-service-sub">Decreto flussi - Nulla Osta</div>
+                    </div>
+                    <div class="pricing-amount">100€</div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>WatiqaFlussi</h3>
-                <p style="line-height: 1.8;">
-                    خدمات أوروبا - المغرب<br>
-                    Services Europe-Maroc<br>
-                    <em>Excellence et confiance depuis 2024</em>
-                </p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Services</h3>
-                <ul>
-                    <li>💰 Transferts d'argent</li>
-                    <li>✈️ Réservation de voyages</li>
-                    <li>📋 Services visa</li>
-                    <li>📄 Documents IT/ES</li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <ul>
-                    <li>📱 +212 750-707218 </li>
-                    <li>💬 WhatsApp 7j/7</li>
-                    <li>🌍 Darija • Français • Italiano • Español</li>
-                </ul>
-            </div>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>WatiqaFlussi</h3>
+            <p style="line-height: 1.8;">
+                خدمات أوروبا - المغرب<br>
+                Services Europe-Maroc
+            </p>
         </div>
         
-        <div class="footer-bottom">
-            <div class="footer-logo">Watiqa<span class="footer-logo-accent">Flussi</span></div>
-            <p style="font-size: 13px; margin-top: 1rem;">© 2026 — Tous droits réservés</p>
+        <div class="footer-section">
+            <h3>Services</h3>
+            <ul>
+                <li>💰 Transferts d'argent</li>
+                <li>✈️ Réservation de voyages</li>
+                <li>📋 Services visa</li>
+                <li>📄 Documents IT/ES</li>
+            </ul>
         </div>
-    </footer>
+        
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+                <li>📱 +212 750-707218</li>
+                <li>💬 WhatsApp 7j/7</li>
+                <li>🌍 AR • FR • IT • ES</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <div class="footer-logo">Watiqa<span class="footer-logo-accent">Flussi</span></div>
+        <p style="font-size: 12px; margin-top: 0.75rem;">© 2026 — Tous droits réservés</p>
+    </div>
+</footer>
 
-    <script>
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
+<script>
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+    
+    // Pricing toggle
+    function togglePricing() {
+        const toggle = document.querySelector('.pricing-toggle');
+        const content = document.getElementById('pricingContent');
+        
+        toggle.classList.toggle('active');
+        content.classList.toggle('active');
+    }
+    
+    // Fade in animations on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
             }
         });
-        
-        // Pricing toggle
-        function togglePricing() {
-            const toggle = document.querySelector('.pricing-toggle');
-            const content = document.getElementById('pricingContent');
-            
-            toggle.classList.toggle('active');
-            content.classList.toggle('active');
-        }
-        
-        // Fade in animations on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        document.querySelectorAll('.service-card, .value-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            observer.observe(el);
-        });
-    </script>
+    }, observerOptions);
+    
+    document.querySelectorAll('.service-card, .value-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        observer.observe(el);
+    });
+</script>
 </body>
 </html>
